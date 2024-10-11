@@ -1,0 +1,98 @@
+.record-search-wrapper {
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin: 0 auto;
+}
+
+.spinner-back {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.spinner {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #999999;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.record-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid #999999;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.input-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.input-group label {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+
+input {
+    width: 260px;
+    padding: 10px;
+}
+
+button {
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.records {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    border: 1px solid #999999;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.record-item {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    word-wrap: break-word;
+}
+
+.record-item div {
+    padding: 6px;
+}
+
+.record-item.header {
+    font-weight: 600;
+}
