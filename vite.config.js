@@ -10,4 +10,8 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    server: {
+        host: 'frontend', // node container in docker
+        origin: 'http://localhost:5173', // exposed node container address
+    },
 });
