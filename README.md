@@ -19,6 +19,16 @@ docker compose build
 docker compose up -d
 ```
 
+Заполняем подключение к БД в файле `.env`
+```yml
+DB_CONNECTION=mysql
+DB_HOST=db
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=test
+DB_PASSWORD=test
+```
+
 Заполняем БД
 ```bash
 docker compose run --rm backend bash -c "php artisan migrate"
